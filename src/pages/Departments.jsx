@@ -20,7 +20,7 @@ const Departments = () => {
   };
 
   return (
-    <div className="w-10/12 flex gap-6 p-10">
+    <div className="w-10/12 flex gap-6 p-10 ml-[17%]">
       <Link
         to={`/products`}
         data-name="category"

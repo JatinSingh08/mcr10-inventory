@@ -8,7 +8,7 @@ const ProductDetail = () => {
   const productDetails = state.productsData.find(product => product.id.toString() === productId);
 
   return (
-    <div className='w-10/12 p-10 flex flex-col items-center justify-center text-start gap-6'>
+    <div className='w-10/12 p-10 flex flex-col items-center justify-center text-start gap-6 ml-[17%]'>
       <div className='text-4xl font-medium underline text-blue-600'>
         <h1>{productDetails?.name}</h1>
       </div>
