@@ -32,7 +32,7 @@ const AddProduct = () => {
   // }
 
   return (
-    <form className="w-10/12 flex gap-6 p-10 ml-[17%] flex-col items-start" onSubmit={addProductHandler}>
+    <form className="w-10/12 flex gap-6 p-10 ml-[17%] flex-col items-start" >
       <div className="text-4xl font-medium">
         <h1>Add New Product</h1>
       </div>
