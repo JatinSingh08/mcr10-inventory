@@ -10,8 +10,6 @@ const DataProvider = ({ children }) => {
   const [state, dispatch] = useReducer(DataReducer, initialState);
 
   let filteredProducts = filtersHandler(state);
-
-  console.log(state.filters);
   return (
     <DataContext.Provider
       value={{

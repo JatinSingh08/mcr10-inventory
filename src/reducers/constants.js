@@ -1,5 +1,5 @@
 export const ActionType = {
-  ADD_ITEM: "ADD_ITEM",
+  ADD_PRODUCT: "ADD_PRODUCT",
   CHANGE_FILTER: "CHANGE_FILTER"
 }
 

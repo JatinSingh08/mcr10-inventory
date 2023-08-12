@@ -20,8 +20,13 @@ const DataReducer = (state, action) => {
           [action.payload.filterType]: action.payload.filterValue
         }
       }
+    case ActionType.ADD_PRODUCT:
+      return {
+        ...state,
+        productsData: action.payload
+      }
     default: 
-      break;
+      return state;
   }
 }
 

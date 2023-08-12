@@ -17,7 +17,7 @@ const ProductTable = ({ data }) => {
         </thead>
         {data.map((kitchenData) => {
           return (
-            <tbody className="font-medium text-start">
+            <tbody className="font-medium text-start" key={kitchenData?.id}>
               <tr>
                 <td className="p-2 border w-24 h-24">
                   <img src={kitchenData?.imageUrl} alt={kitchenData?.name} />

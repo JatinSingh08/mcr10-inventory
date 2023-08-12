@@ -9,15 +9,15 @@ const filtersHandler = (state) => {
       ? newData
       : newData.filter((data) => data.department === category);
   newData = lowStockItems
-    ? newData.filter((data) => data.stock <= 10)
+    ? newData.filter((data) => parseFloat(data.stock) <= 10)
     : newData;
   newData = sort
     ? newData.sort((a, b) =>
         sort === "name"
           ? a.name.localeCompare(b.name)
           : sort === "price"
-          ? a.price - b.price
-          : a.stock - b.stock
+          ? parseFloat(a.price) - parseFloat(b.price)
+          : parseFloat(a.stock) - parseFloat(b.stock)
       )
     : newData;
   return newData;
