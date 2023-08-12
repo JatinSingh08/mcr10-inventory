@@ -10,7 +10,6 @@ const Header = () => {
     const filterValue = e.target.value;
 
     dispatch({ type: ActionType.CHANGE_FILTER, payload: {filterType, filterValue}})
-    
   }
 
   return (
@@ -32,17 +31,20 @@ const Header = () => {
       </div>
       <div>
         <label htmlFor="low__stock" className='gap-2 flex items-center justify-center'>
-          <input type="checkbox" id='low__stock' name='lowStockItems' value={state.filters.lowStockItems} />
+          <input type="checkbox" id='low__stock' name='lowStockItems' value={state.filters.lowStockItems}
+          onChange={filtersHandler}
+          />
           Low Stock Items
         </label>
       </div>
       <div >
-        <select id="" className='bg-gray-200 p-2 rounded-lg'
+        <select className='bg-gray-200 p-2 rounded-lg'
         name='sort'
+        onChange={filtersHandler}
         >
           <option value="name">Name</option>
           <option value="price">Price</option>
-          <option value="stock">Clothing</option>
+          <option value="stock">Stock</option>
         </select>
       </div>
       <div>

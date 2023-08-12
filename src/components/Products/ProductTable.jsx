@@ -3,7 +3,7 @@ import React from "react";
 const ProductTable = ({ data }) => {
   return (
     <div>
-      <table className="w-full border-collapse overflow-y-auto">
+      <table className="w-full border-collapse">
         <thead>
           <tr className="bg-gray-100">
             <th className="p-2 border">Image</th>
