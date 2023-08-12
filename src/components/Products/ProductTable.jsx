@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ProductTable = ({ data }) => {
   return (
@@ -21,7 +22,9 @@ const ProductTable = ({ data }) => {
                 <td className="p-2 border w-24 h-24">
                   <img src={kitchenData?.imageUrl} alt={kitchenData?.name} />
                 </td>
-                <td className="p-2 border w-56">{kitchenData?.name}</td>
+                <td className="p-2 border w-56 text-blue-500 ">
+                  <Link to={`/products/${kitchenData?.id}`}>{kitchenData?.name}</Link>
+                </td>
                 <td className="p-2 border w-96">{kitchenData?.description}</td>
                 <td className="p-2 border">${kitchenData?.price}</td>
                 <td className="p-2 border">{kitchenData?.stock}</td>
