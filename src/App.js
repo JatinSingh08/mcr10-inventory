@@ -13,7 +13,7 @@ function App() {
           <Route path="/" element={<AppLayout />}>
             <Route index element={<Dashboard />} />
             <Route path="departments" element={<Departments />} />
-            <Route path="products/:category" element={<Products />} />
+            <Route path="products" element={<Products />} />
           </Route>
         </Routes>
       </BrowserRouter>
