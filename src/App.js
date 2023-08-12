@@ -5,6 +5,7 @@ import Dashboard from "./pages/Dashboard";
 import Departments from "./pages/Departments";
 import Products from "./pages/Products";
 import ProductDetail from "./pages/ProductDetail";
+import AddProduct from "./pages/AddProduct";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Route path="departments" element={<Departments />} />
             <Route path="products" element={<Products />} />
             <Route path="products/:productId" element={<ProductDetail />} />
+            <Route path="add" element={<AddProduct />} />
           </Route>
         </Routes>
       </BrowserRouter>

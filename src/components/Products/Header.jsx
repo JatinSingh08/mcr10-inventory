@@ -1,10 +1,11 @@
 import React from "react";
 import { useData } from "../../context/data/data-context";
 import { ActionType } from "../../reducers/constants";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const { state, dispatch } = useData();
-
+  const navigate = useNavigate();
   const filtersHandler = (e) => {
     const filterType = e.target.name;
     let filterValue = e.target.value;
@@ -61,7 +62,9 @@ const Header = () => {
         </select>
       </div>
       <div>
-        <button className="bg-blue-600 text-white px-6 py-2 rounded-lg">
+        <button className="bg-blue-600 text-white px-6 py-2 rounded-lg"
+        onClick={() => navigate('/add')}
+        >
           New
         </button>
       </div>
