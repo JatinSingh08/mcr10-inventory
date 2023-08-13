@@ -13,26 +13,27 @@ const AddProduct = () => {
     stock: 0,
     supplier: "",
     delivered: 0,
-    imageUrl: ""
+    imageUrl: "https://thumbs.dreamstime.com/z/warner-bros-studio-burbank-los-angeles-county-23158123.jpg?w=992"
   })
 
-  // const addProductHandler = (e) => {
-  //   dispatch({ type: ActionType.ADD_PRODUCT, payload: productData})
-  //   setProductData({
-  //     id: state?.productsData?.length + 1,
-  //     department: "",
-  //     name: "",
-  //     description: "",
-  //     price: 0,
-  //     stock: 0,
-  //     supplier: "",
-  //     delivered: 0,
-  //     imageUrl: "https://www.dreamstime.com/stock-photos-warner-bros-studio-burbank-los-angeles-county-image23158123"
-  //   })
-  // }
+  const addProductHandler = (e) => {
+    e.preventDefault();
+    dispatch({ type: ActionType.ADD_PRODUCT, payload: productData})
+    setProductData({
+      id: state?.productsData?.length + 1,
+      department: "",
+      name: "",
+      description: "",
+      price: 0,
+      stock: 0,
+      supplier: "",
+      delivered: 0,
+      imageUrl: "https://thumbs.dreamstime.com/z/warner-bros-studio-burbank-los-angeles-county-23158123.jpg?w=992"
+    })
+  }
 
   return (
-    <form className="w-10/12 flex gap-6 p-10 ml-[17%] flex-col items-start" >
+    <form className="w-10/12 flex gap-6 p-10 ml-[17%] flex-col items-start" onSubmit={addProductHandler}>
       <div className="text-4xl font-medium">
         <h1>Add New Product</h1>
       </div>

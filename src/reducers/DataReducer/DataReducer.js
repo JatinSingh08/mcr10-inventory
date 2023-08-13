@@ -23,7 +23,7 @@ const DataReducer = (state, action) => {
     case ActionType.ADD_PRODUCT:
       return {
         ...state,
-        productsData: action.payload
+        productsData: [...state.productsData, action.payload]
       }
     default: 
       return state;
